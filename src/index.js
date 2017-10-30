@@ -24,6 +24,10 @@ app.post('/', function(req, res) {
     res.send(req.body);
 });
 
+app.post('*', function(req, res) {
+    res.send('[ERROR] endpoint not found', req.path);
+})
+
 https.createServer(options, app).listen(443, function(err) {
     console.log('Server running on port 443');
 });
