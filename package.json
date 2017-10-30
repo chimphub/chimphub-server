@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/chimphub/chimphub-server/issues"
   },
-  "homepage": "https://github.com/chimphub/chimphub-server#readme"
+  "homepage": "https://github.com/chimphub/chimphub-server#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
