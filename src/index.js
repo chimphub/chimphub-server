@@ -24,8 +24,13 @@ app.post('/', function(req, res) {
     res.send(req.body);
 });
 
+app.post('/app/webhooks', function(req, res) {
+    console.log(req.body);
+    res.status(200).send('OK');
+})
+
 app.post('*', function(req, res) {
-    console.log(req.path);
+    console.log('[ERROR] endpoint not found', req.path);
     res.send('[ERROR] endpoint not found');
 })
 
