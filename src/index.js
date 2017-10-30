@@ -25,7 +25,8 @@ app.post('/', function(req, res) {
 });
 
 app.post('*', function(req, res) {
-    res.send('[ERROR] endpoint not found', req.path);
+    console.log(req.path);
+    res.send('[ERROR] endpoint not found');
 })
 
 https.createServer(options, app).listen(443, function(err) {
