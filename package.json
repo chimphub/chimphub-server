@@ -4,6 +4,7 @@
   "description": "The NodeJS backend server of the Chimphub integration",
   "main": "src/index.js",
   "scripts": {
+    "dev": "PORT=3000 NODE_ENV=development ./node_modules/nodemon/bin/nodemon.js src/index.js",
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +25,10 @@
   "homepage": "https://github.com/chimphub/chimphub-server#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
